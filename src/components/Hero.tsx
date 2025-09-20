@@ -1,42 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
+  const title = "Google Developer Group Ranchi";
+
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-black via-gray-950 to-gray-900">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(66,133,244,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(52,168,83,0.1),transparent_50%)]"></div>
+    <section
+      className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 
+      animate-gradient bg-[radial-gradient(circle_at_top_left,#4285F4,transparent_30%),radial-gradient(circle_at_bottom_right,#EA4335,transparent_30%)] 
+      bg-gradient-to-r from-[#34A853] via-[#FBBC05] to-[#EA4335] bg-[length:200%_200%] bg-[position:0%_50%]"
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/30"></div>
 
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 max-w-4xl"
+        transition={{ duration: 1 }}
+        className="relative z-10 text-white max-w-3xl"
       >
         {/* Logo */}
-        <div className="mb-8">
-          <Image
-            src="/images/gdgLogo.png"
-            alt="GDG Ranchi"
-            width={90}
-            height={60}
-            className="mx-auto drop-shadow-sm"
-          />
-        </div>
+        <Image
+          src="/images/gdgLogo.png"
+          alt="GDG Ranchi"
+          width={100}
+          height={70}
+          className=" p-1 mx-auto mb-6 shadow-xl "
+        />
 
-        {/* Title */}
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-          Google Developer Group
-          <span className="block text-blue-400 mt-2">Ranchi</span>
+        {/* Animated Title */}
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 flex flex-wrap justify-center gap-1">
+          {title.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ y: -80, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: index * 0.08,
+                type: "spring",
+                stiffness: 300,
+                damping: 12,
+              }}
+              className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light max-w-2xl mx-auto leading-relaxed">
-          Jharkhand's premier tech community for developers, innovators, and
-          learners
+        <p className="text-lg md:text-xl mb-6">
+          Jharkhand • Building a community of developers, innovators, and
+          learners.
         </p>
 
         {/* CTA Button */}
