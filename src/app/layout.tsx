@@ -14,6 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap"
+          rel="stylesheet"
+        />
         <Navbar />
         <main>{children}</main>
       </body>
