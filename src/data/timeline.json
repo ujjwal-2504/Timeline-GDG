@@ -14,9 +14,7 @@
       "/images/Devfest2024/Devfest2024(2).JPG",
       "/images/Devfest2024/Devfest2024(3).JPG",
       "/images/Devfest2024/Devfest2024(4).JPG",
-      "/images/Devfest2024/Devfest2024News(1).jpg",
-      "/images/Devfest2024/Devfest2024News(2).jpg",
-      "/images/Devfest2024/Devfest2024News(3).jpg"
+      "/images/Devfest2024/Devfest2024(5).JPG"
     ]
   },
   {
@@ -67,6 +65,31 @@
     ]
   },
   {
+    "title": "Eklavya Tech Fest 2025",
+    "about": "We collaborated with the Department of Computer Applications at Dr. Shyama Prasad Mukherjee University (DSPMU) to co-create their flagship Eklavya Tech Fest 2025 as a platform where creativity meets technology, encouraging student engagement, inter-college collaboration, and industry interaction.",
+    "description": "In this fest there are multiple events, including an hackathon, UI/UX design, Robo Maze, Fast Calculation (Vedic Math), video editing, cosplay, expert talks, and cultural showcases. We supported the fest with guidance, across some of the events; our team—Deshbandhu Mishra, Rishav Sinha, and Shouvik Dey—conducted seminars, interacted with participants, and provided industry insights that elevated the experience for all attendees, motivating evaluations that inspired participants to deliver their best.",
+    "date": "April 23–24, 2025",
+    "timeline": "April 23, 2025",
+    "time": "10:00 AM – 5:00 PM",
+    "location": "New Academic Building, Dr. Shyama Prasad Mukherjee University (DSPMU), Ranchi, Jharkhand 834008",
+    "institute": "Department of Computer Applications, Dr. Shyama Prasad Mukherjee University (DSPMU), Ranchi",
+    "slug": "eklavya-tech-fest-2025-april-23-24-2025-department-of-computer-applications-dr-shyama-prasad-mukherjee-university-dspmu-ranchi",
+    "images": [
+      "images/Eklavya_Techfest/Eklavya_Techfest.jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(1).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(2).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(3).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(4).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(5).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(6).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(7).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(8).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(9).jpg",
+      "images/Eklavya_Techfest/Eklavya_Techfest(10).jpg"
+    ]
+  },
+
+  {
     "title": "Understanding Cybersecurity in the age of Generative AI",
     "about": "Organized by GDG Ranchi in collaboration with Usha Martin University, this event focuses on the security challenges arising with the rapid adoption of Generative AI technologies. Attendees will explore the dark side of Gen AI including prompt injections, jailbreaking, and advanced AI exploits.",
     "description": "While developers create magic with AI, attackers are finding new ways to break it. This session dives deep into real Gen AI security threats and how to tackle them, offering insights from a seasoned AI expert, Nikhilesh, IIT Kharagpur alumnus and Google Developer Expert. Participants will learn about AI vulnerabilities and network with fellow tech enthusiasts to build AI that is not just smart but also secure.",
@@ -111,7 +134,7 @@
     "slug": "wire-to-web-hands-on-webdev-workshop-june-12-2025"
   },
   {
-    "title": "GDG Ranchis Summer TrainingInternship Program 2025",
+    "title": "GDG Ranchis Summer Training Internship Program 2025",
     "about": "Registrations Open! Get ready to kickstart your tech journey with GDG Ranchis Summer TrainingInternship Program 2025 in collaboration with Piyush Academy! Open to all -- No experience needed, just passion consistency!",
     "description": "Learn Full-Stack Web Development HTML, CSS, JS, React, Node.js, MongoDB, Google Cloud Firebase, GCP, Compute Engine, daily tasks, weekend projects, live deployment, mentorship, swags, spotlight, and internship certificate from GDG Ranchhi. Capstone showcase to industry experts included.",
     "date": "June 14 -- July 19, 2025",
@@ -119,7 +142,16 @@
     "time": "",
     "location": "Hybrid Online Offline",
     "institute": "",
-    "slug": "gdg-ranchis-summer-traininginternship-program-2025-june-14-july-19-2025"
+    "slug": "gdg-ranchis-summer-traininginternship-program-2025-june-14-july-19-2025",
+    "images": [
+      "images/Summer_Training_Program/summer_internship_program_1.jpg",
+      "images/Summer_Training_Program/summer_internship_program_2.jpg",
+      "images/Summer_Training_Program/summer_internship_program_3.jpg",
+      "images/Summer_Training_Program/summer_internship_program_4.jpg",
+      "images/Summer_Training_Program/summer_internship_program_5.jpg",
+      "images/Summer_Training_Program/summer_internship_program_6.jpg",
+      "images/Summer_Training_Program/summer_internship_program_7.jpg"
+    ]
   },
   {
     "title": "Jharkhand Entrepreneurial Connect 2.0",
@@ -170,7 +202,15 @@
     "time": "9:00 AM - 5:00 PM",
     "location": "Department of Mathematics, Birla Institute of Technology (BIT) Mesra, Ranchi - 835215, Jharkhand",
     "institute": "Birla Institute of Technology (BIT) Mesra",
-    "slug": "national-symposium-on-mathematical-innovations-and-its-industrial-applications-august-8-10-2025-birla-institute-of-technology-bit-mesra"
+    "slug": "national-symposium-on-mathematical-innovations-and-its-industrial-applications-august-8-10-2025-birla-institute-of-technology-bit-mesra",
+    "images": [
+      "images/NSMIIA/nsmiia_1.jpg",
+      "images/NSMIIA/nsmiia_2.jpg",
+      "images/NSMIIA/nsmiia_3.jpg",
+      "images/NSMIIA/nsmiia_4.jpg",
+      "images/NSMIIA/nsmiia_5.jpg",
+      "images/NSMIIA/nsmiia_6.jpg"
+    ]
   },
   {
     "title": "DevSpark Pre-Hype DevFest25-- NIAMT",
@@ -210,7 +250,12 @@
     "time": "1:30 PM -- 3:30 PM",
     "location": "Seminar Hall in New Academic Complex NAC, IIT Dhanbad Internal Road, Dhanbad, 826007",
     "institute": "IIT Dhanbad",
-    "slug": "devspark-pre-hype-devfest25-iit-dhanbad-september-6-2025-iit-dhanbad"
+    "slug": "devspark-pre-hype-devfest25-iit-dhanbad-september-6-2025-iit-dhanbad",
+    "images": [
+      "images/Devspark_IIT_Dhanbad/devspark_ism_1.jpg",
+      "images/Devspark_IIT_Dhanbad/devspark_ism_2.jpg",
+      "images/Devspark_IIT_Dhanbad/devspark_ism_3.jpg"
+    ]
   },
   {
     "title": "DevSpark Pre-Hype DevFest25 -- DSPMU",
@@ -220,7 +265,13 @@
     "time": "10:53 AM -- 1:53 PM",
     "location": "Dr. Shyama Prasad Mukherjee University, Post, Ranchi, 834008",
     "institute": "Dr. Shyama Prasad Mukherjee University",
-    "slug": "devspark-pre-hype-devfest25-dspmu-september-11-2025-dr-shyama-prasad-mukherjee-university"
+    "slug": "devspark-pre-hype-devfest25-dspmu-september-11-2025-dr-shyama-prasad-mukherjee-university",
+    "images": [
+      "images/Devspark_DSPMU/Devspark_DSPMU(1).jpg",
+      "images/Devspark_DSPMU/Devspark_DSPMU(2).jpg",
+      "images/Devspark_DSPMU/Devspark_DSPMU(3).jpg",
+      "images/Devspark_DSPMU/Devspark_DSPMU(4).jpg"
+    ]
   },
   {
     "title": "DevSpark Pre-Hype DevFest25 -- JRSU",

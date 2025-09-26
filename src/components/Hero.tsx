@@ -6,7 +6,7 @@ import { Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
-  const title = "Google Developer Group Ranchi";
+  const title = "Google Developer Groups Ranchi";
 
   return (
     <section
