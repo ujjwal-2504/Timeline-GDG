@@ -314,7 +314,17 @@
     "time": "10:00 AM -- 11:30 AM",
     "location": "Birla Institute of Technology Deoghar, Seminar Hall, Jasidih, 814142",
     "institute": "Birla Institute of Technology Deoghar",
-    "slug": "devspark-pre-hype-devfest25-bit-devghar-september-13-2025-birla-institute-of-technology-deoghar"
+    "slug": "devspark-pre-hype-devfest25-bit-devghar-september-13-2025-birla-institute-of-technology-deoghar",
+    "images": [
+      "images/Devspark_BIT_Devghar/Devspark_BIT_Devghar_1.jpeg",
+      "images/Devspark_BIT_Devghar/Devspark_BIT_Devghar_2.jpeg",
+      "images/Devspark_BIT_Devghar/Devspark_BIT_Devghar_3.jpeg",
+      "images/Devspark_BIT_Devghar/Devspark_BIT_Devghar_4.jpeg",
+      "images/Devspark_BIT_Devghar/Devspark_BIT_Devghar_5.jpeg",
+      "images/Devspark_BIT_Devghar/Devspark_BIT_Devghar_6.jpeg",
+      "images/Devspark_BIT_Devghar/Devspark_BIT_Devghar_7.jpeg",
+      "images/Devspark_BIT_Devghar/Devspark_BIT_Devghar_8.jpeg"
+    ]
   },
   {
     "title": "DevFest 2025 Hype Event - Interactive Session with GDG Ranchi",
