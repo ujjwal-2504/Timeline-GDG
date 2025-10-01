@@ -176,8 +176,8 @@
     "institute": "Netaji Subhas University (NSU)",
     "slug": "gdg-ranchi-tech-session-at-nsu-july-15-2025-netaji-subhas-university-nsu",
     "images": [
-      "images/Tech-Session-NSU/tech-session-nsu (1).jpg",
       "images/Tech-Session-NSU/tech-session-nsu (2).jpg",
+      "images/Tech-Session-NSU/tech-session-nsu (1).jpg",
       "images/Tech-Session-NSU/tech-session-nsu (3).jpg",
       "images/Tech-Session-NSU/tech-session-nsu (4).jpg",
       "images/Tech-Session-NSU/tech-session-nsu (5).jpg",
@@ -258,7 +258,13 @@
     "time": "11:00 AM -- 12:30 PM",
     "location": "Ramgarh Engineering College, Seminar Hall, Murubanda, 825101",
     "institute": "Ramgarh Engineering College",
-    "slug": "devspark-pre-hype-devfest25-rec-september-2-2025-ramgarh-engineering-college"
+    "slug": "devspark-pre-hype-devfest25-rec-september-2-2025-ramgarh-engineering-college",
+    "images": [
+      "/images/Devspark_REC/Devspark_REC_1.jpg",
+      "/images/Devspark_REC/Devspark_REC_2.jpg",
+      "/images/Devspark_REC/Devspark_REC_3.jpg",
+      "/images/Devspark_REC/Devspark_REC_4.jpg"
+    ]
   },
   {
     "title": "DevSpark Pre-Hype DevFest25 -- RVS",
