@@ -65,13 +65,11 @@
   animation: gradient 12s ease infinite;
 }
 
-/* body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Google Sans Code", monospace;
-  font-weight: 300;
-  
-} */
+/* globals.css */
+html,
+body {
+  overflow-x: hidden;
+}
 
 body {
   /* Grid background */
@@ -90,10 +88,19 @@ body {
   background-color: white;
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 1px,
       transparent 1px
     ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 50px 50px; /* grid size */
   background-attachment: fixed; /* keeps grid static while scrolling */
+}
+
+.st0 {
+  fill: none;
+  stroke: #51ff2e;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
 }

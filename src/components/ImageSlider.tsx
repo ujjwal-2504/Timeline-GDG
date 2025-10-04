@@ -139,7 +139,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
 
   return (
     <motion.div
-      className={`relative w-full rounded-md overflow-hidden border border-white/6 shadow-sm group ${className}`}
+      className={`relative w-full rounded-md overflow-hidden border border-white/6  shadow-sm group ${className}`}
       whileHover={shouldReduceMotion ? {} : { scale: 1.0 }}
       transition={{ type: "tween", duration: 0.2 }}
       onMouseEnter={pauseSlideshow}
