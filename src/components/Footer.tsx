@@ -8,7 +8,9 @@ import {
   FaInstagram,
   FaLinkedin,
   FaYoutube,
+  FaGithub,
 } from "react-icons/fa";
+import { FaG } from "react-icons/fa6";
 
 export default function Footer() {
   const navLinks = [
@@ -18,11 +20,12 @@ export default function Footer() {
   ];
 
   const socials = [
-    { icon: <FaFacebook />, href: "#" },
-    { icon: <FaTwitter />, href: "#" },
-    { icon: <FaInstagram />, href: "#" },
-    { icon: <FaLinkedin />, href: "#" },
-    { icon: <FaYoutube />, href: "#" },
+    { icon: <FaFacebook />, href: "https://www.facebook.com/gdgrnc/" },
+    { icon: <FaTwitter />, href: "https://x.com/gdgrnc" },
+    { icon: <FaInstagram />, href: "https://www.instagram.com/gdgranchi/" },
+    { icon: <FaLinkedin />, href: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A96659640&keywords=google%20developer%20group%20ranchi&origin=RICH_QUERY_SUGGESTION&position=1&searchId=9fef4000-60b6-438c-a905-ceffbfcaa840&sid=Ru_&spellCorrectionEnabled=false" },
+    { icon: <FaYoutube />, href: "https://www.youtube.com/@GDGRanchi" },
+    { icon: <FaGithub />, href: "https://github.com/GDGRanchi" },
   ];
 
   return (
