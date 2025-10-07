@@ -41,50 +41,101 @@ export default function UpcomingEventsPage() {
 
   // ✅ Full DevFest Schedule from your PDF
   const seminars = [
-    { title: "DevFest 2025 Kickoff & Inauguration", start: "09:00", end: "09:09" },
-    { title: "Welcome Address — Tushar Raj (GDG Ranchi Organizer, Adrosonic)", start: "09:09", end: "09:21" },
-    { title: "Words of Wisdom — Dr. Indranil Manna (VC, BIT Mesra)", start: "09:23", end: "09:38" },
-    { title: "Keynote — Dr. A. S. Kiran Kumar (Former ISRO Chairman)", start: "09:40", end: "10:05" },
-    { title: "Keynote — Arun Teja Godavarthi (Google for Developers)", start: "10:07", end: "10:22" },
-    { title: "Talk — Ali Mustufa (Senior Developer Advocate at Pieces): Artificial Memory: Can an LLM Become You?", start: "10:24", end: "10:54" },
-    { title: "Tea & Networking Break", start: "10:54", end: "11:19" },
-    { title: "Talk — Mohana (GitHub Ambassador)", start: "11:19", end: "11:32" },
     {
-      title: "Panel Discussion — Digital Trust in the Age of AI & Cyber Threats",
+      title: "DevFest 2025 Kickoff & Inauguration",
+      start: "09:00",
+      end: "09:09",
+    },
+    {
+      title: "Welcome Address — Tushar Raj (GDG Ranchi Organizer, Adrosonic)",
+      start: "09:09",
+      end: "09:21",
+    },
+    {
+      title: "Words of Wisdom — Dr. Indranil Manna (VC, BIT Mesra)",
+      start: "09:23",
+      end: "09:38",
+    },
+    {
+      title: "Keynote — Dr. A. S. Kiran Kumar (Former ISRO Chairman)",
+      start: "09:40",
+      end: "10:05",
+    },
+    {
+      title: "Keynote — Arun Teja Godavarthi (Google for Developers)",
+      start: "10:07",
+      end: "10:22",
+    },
+    {
+      title:
+        "Talk — Ali Mustufa (Senior Developer Advocate at Pieces): Artificial Memory: Can an LLM Become You?",
+      start: "10:24",
+      end: "10:54",
+    },
+    { title: "Tea & Networking Break", start: "10:54", end: "11:19" },
+    {
+      title: "Talk — Mohana (GitHub Ambassador)",
+      start: "11:19",
+      end: "11:32",
+    },
+    {
+      title:
+        "Panel Discussion — Digital Trust in the Age of AI & Cyber Threats",
       start: "11:34",
       end: "12:09",
     },
-    { title: "Talk — Tejas Suresh (Implementation Head, YRI): YRI Intro", start: "12:12", end: "12:37" },
-    { title: "Lunch Break", start: "12:37", end: "13:17" },
-    { title: "Talk — Saurabh Rajpal (Google): Web Walo Ki Baithak", start: "13:17", end: "13:47" },
     {
-      title: "Talk — Saurabh Mishra (Google Developer Expert, Cloud): Scalable API Testing & Monitoring",
+      title: "Talk — Tejas Suresh (Implementation Head, YRI): YRI Intro",
+      start: "12:12",
+      end: "12:37",
+    },
+    { title: "Lunch Break", start: "12:37", end: "13:17" },
+    {
+      title: "Talk — Saurabh Rajpal (Google): Web Walo Ki Baithak",
+      start: "13:17",
+      end: "13:47",
+    },
+    {
+      title:
+        "Talk — Saurabh Mishra (Google Developer Expert, Cloud): Scalable API Testing & Monitoring",
       start: "13:49",
       end: "14:19",
     },
-    { title: "Interactive Game / Quiz (with Goodies)", start: "14:21", end: "14:31" },
     {
-      title: "Talk — Aanchal Mishra (Postman): You Can’t Do AI Without Quality APIs: The MCP Evolution",
+      title: "Interactive Game / Quiz (with Goodies)",
+      start: "14:21",
+      end: "14:31",
+    },
+    {
+      title:
+        "Talk — Aanchal Mishra (Postman): You Can’t Do AI Without Quality APIs: The MCP Evolution",
       start: "14:33",
       end: "15:03",
     },
     { title: "Happy Hour & Booth Interactions", start: "15:03", end: "15:33" },
     {
-      title: "Talk — Imran Roshan (Deloitte, GDE-GCP): WTH - Using AI for Security on GCP",
+      title:
+        "Talk — Imran Roshan (Deloitte, GDE-GCP): WTH - Using AI for Security on GCP",
       start: "15:33",
       end: "16:03",
     },
     {
-      title: "Talk — Ashish Kumar Verma (AI Engineer, GDE): Neurons to Networks: Orchestrating Memory",
+      title:
+        "Talk — Ashish Kumar Verma (AI Engineer, GDE): Neurons to Networks: Orchestrating Memory",
       start: "16:05",
       end: "16:35",
     },
     {
-      title: "Talk — Abhishek Sharma (Lead Cloud Engineer @ Searce, GDE-GCP): Accelerating Enterprise Development",
+      title:
+        "Talk — Abhishek Sharma (Lead Cloud Engineer @ Searce, GDE-GCP): Accelerating Enterprise Development",
       start: "16:37",
       end: "17:07",
     },
-    { title: "Closing Ceremony + Group Photo + Goodies Distribution", start: "17:07", end: "17:30" },
+    {
+      title: "Closing Ceremony + Group Photo + Goodies Distribution",
+      start: "17:07",
+      end: "17:30",
+    },
   ];
 
   const getCurrentSessionIndex = () => {
@@ -113,7 +164,19 @@ export default function UpcomingEventsPage() {
 
   const currentSessionIndex = getCurrentSessionIndex();
 
-  const Particle = ({ x, y, delay, size, color }: { x: number; y: number; delay: number; size: number; color: string }) => (
+  const Particle = ({
+    x,
+    y,
+    delay,
+    size,
+    color,
+  }: {
+    x: number;
+    y: number;
+    delay: number;
+    size: number;
+    color: string;
+  }) => (
     <motion.div
       initial={{ opacity: 0, x, y }}
       animate={{
@@ -121,7 +184,12 @@ export default function UpcomingEventsPage() {
         y: [y, y - Math.random() * 60, y - Math.random() * 120],
         x: [x, x + Math.random() * 20 - 10, x + Math.random() * 30 - 15],
       }}
-      transition={{ duration: 2 + Math.random() * 1.5, delay, repeat: Infinity, ease: "easeInOut" }}
+      transition={{
+        duration: 2 + Math.random() * 1.5,
+        delay,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
       className={`absolute rounded-full`}
       style={{
         width: size,
@@ -137,7 +205,8 @@ export default function UpcomingEventsPage() {
   const strokeWidth = 12;
   const radius = (circleSize - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
-  const getStrokeDashoffset = (progress: number) => circumference - progress * circumference;
+  const getStrokeDashoffset = (progress: number) =>
+    circumference - progress * circumference;
 
   const dayProgress = timeLeft.days / 30;
   const hourProgress = timeLeft.hours / 24;
@@ -146,7 +215,7 @@ export default function UpcomingEventsPage() {
 
   return (
     <main
-      className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-x-hidden"
+      className="font-ProductSans relative min-h-screen flex flex-col items-center justify-center text-white overflow-x-hidden"
       style={{
         backgroundImage: "url('/images/bgwebdevfest.jpg')",
         backgroundSize: "cover",
@@ -190,13 +259,26 @@ export default function UpcomingEventsPage() {
         {/* Countdown before event */}
         {!isStarted && (
           <motion.div className="flex flex-wrap justify-center gap-12 mb-16">
-            {[{ label: "Days", value: timeLeft.days, progress: dayProgress },
+            {[
+              { label: "Days", value: timeLeft.days, progress: dayProgress },
               { label: "Hours", value: timeLeft.hours, progress: hourProgress },
-              { label: "Minutes", value: timeLeft.minutes, progress: minuteProgress },
-              { label: "Seconds", value: timeLeft.seconds, progress: secondProgress },
+              {
+                label: "Minutes",
+                value: timeLeft.minutes,
+                progress: minuteProgress,
+              },
+              {
+                label: "Seconds",
+                value: timeLeft.seconds,
+                progress: secondProgress,
+              },
             ].map((item, idx) => (
               <div key={idx} className="relative flex flex-col items-center">
-                <svg width={circleSize} height={circleSize} className="rotate-[-90deg]">
+                <svg
+                  width={circleSize}
+                  height={circleSize}
+                  className="rotate-[-90deg]"
+                >
                   <circle
                     cx={circleSize / 2}
                     cy={circleSize / 2}
@@ -226,7 +308,9 @@ export default function UpcomingEventsPage() {
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <p className="text-4xl font-bold">{item.value}</p>
-                  <p className="uppercase text-sm text-gray-300">{item.label}</p>
+                  <p className="uppercase text-sm text-gray-300">
+                    {item.label}
+                  </p>
                 </div>
               </div>
             ))}
@@ -275,7 +359,9 @@ export default function UpcomingEventsPage() {
                         : "border-gray-600 bg-gray-800/40 text-gray-300 hover:bg-gray-800/60"
                     }`}
                   >
-                    <p className="font-semibold text-lg md:text-xl">{s.title}</p>
+                    <p className="font-semibold text-lg md:text-xl">
+                      {s.title}
+                    </p>
                     <p className="text-sm md:text-base mt-1 text-gray-400">
                       {s.start} - {s.end}
                     </p>
@@ -284,7 +370,11 @@ export default function UpcomingEventsPage() {
               </AnimatePresence>
             </div>
 
-            <motion.div className="mt-12" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              className="mt-12"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Link
                 href="/"
                 className="inline-block px-12 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-lg rounded-full shadow-md hover:shadow-indigo-500/50 transition"
