@@ -27,94 +27,128 @@ type Event = {
 export default function Timeline() {
   const title = "Google Developer Groups Ranchi";
   const timelineRef = useRef<HTMLDivElement>(null);
+  const animationInitialized = useRef(false);
 
   useEffect(() => {
-    const sections = timelineRef.current?.querySelectorAll(".timeline-event");
-    if (!sections) return;
+    if (typeof window === "undefined" || animationInitialized.current) return;
 
-    sections.forEach((section) => {
-      const meta = section.querySelector(".meta") as HTMLElement | null;
-      const card = section.querySelector(".card") as HTMLElement | null;
-      const line = section.querySelector(".connector") as HTMLElement | null;
+    // Wait for Hero to finish initializing
+    const initTimer = setTimeout(() => {
+      const sections = timelineRef.current?.querySelectorAll(".timeline-event");
+      if (!sections) return;
 
-      if (meta) {
-        // center metadata initially
-        gsap.set(meta, { xPercent: -50, left: "50%", position: "relative" });
-      }
+      animationInitialized.current = true;
+      const scrollTriggers: ScrollTrigger[] = [];
 
-      if (card) {
-        gsap.set(card, { opacity: 0, y: 200 });
-      }
+      sections.forEach((section, idx) => {
+        const meta = section.querySelector(".meta") as HTMLElement | null;
+        const card = section.querySelector(".card") as HTMLElement | null;
+        const line = section.querySelector(".connector") as HTMLElement | null;
 
-      if (line) {
-        // IMPORTANT: animate from the top of the connector (which is aligned
-        // to the bottom edge of the card because we use top-full)
-        gsap.set(line, { scaleY: 0, transformOrigin: "top center" });
-      }
+        if (meta) {
+          gsap.set(meta, { xPercent: -50, left: "50%", position: "relative" });
+        }
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top 70%",
-          end: "bottom 40%",
-          scrub: 1,
-        },
+        if (card) {
+          gsap.set(card, { opacity: 0, y: 200 });
+        }
+
+        if (line) {
+          gsap.set(line, { scaleY: 0, transformOrigin: "top center" });
+        }
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: "top 70%",
+            end: "bottom 40%",
+            scrub: 1,
+            id: `timeline-event-${idx}`,
+            invalidateOnRefresh: true,
+            refreshPriority: -1, // Lower priority than hero
+            onRefresh: (self) => {
+              // Recalculate on refresh
+              scrollTriggers.push(self as ScrollTrigger);
+            },
+          },
+        });
+
+        if (meta) {
+          tl.fromTo(
+            meta,
+            { opacity: 0, scale: 0.8 },
+            { opacity: 0.9, scale: 1.05, duration: 1.1, ease: "power3.out" }
+          );
+        }
+
+        if (card) {
+          tl.fromTo(
+            card,
+            { y: 200, opacity: 0, scale: 0.95 },
+            {
+              y: 0,
+              opacity: 1,
+              scale: 1.02,
+              duration: 1.1,
+              ease: "power3.out",
+            },
+            "+=0.25"
+          );
+        }
+
+        if (meta) {
+          tl.to(
+            meta,
+            {
+              xPercent: 0,
+              left: "0%",
+              scale: 1,
+              duration: 0.9,
+              ease: "power2.inOut",
+            },
+            "<"
+          );
+        }
+
+        if (card) {
+          tl.to(
+            card,
+            { scale: 1, duration: 0.7, ease: "power2.inOut" },
+            "-=0.2"
+          );
+        }
+
+        if (line) {
+          tl.to(
+            line,
+            {
+              scaleY: 2.5,
+              duration: 1,
+              ease: "power2.inOut",
+            },
+            "+=0.05"
+          );
+        }
       });
 
-      // Step 1: metadata enters at center
-      if (meta) {
-        tl.fromTo(
-          meta,
-          { opacity: 0, scale: 0.8 },
-          { opacity: 0.9, scale: 1.05, duration: 1.1, ease: "power3.out" }
-        );
-      }
+      const refreshTimer = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 200);
 
-      // Step 2: image enters from bottom
-      if (card) {
-        tl.fromTo(
-          card,
-          { y: 200, opacity: 0, scale: 0.95 },
-          { y: 0, opacity: 1, scale: 1.02, duration: 1.1, ease: "power3.out" },
-          "+=0.25"
-        );
-      }
+      return () => {
+        clearTimeout(refreshTimer);
+      };
+    }, 300); // Wait 300ms for Hero to mount
 
-      // Step 3: push metadata left while image takes its spot
-      if (meta) {
-        tl.to(
-          meta,
-          {
-            xPercent: 0,
-            left: "0%",
-            scale: 1,
-            duration: 0.9,
-            ease: "power2.inOut",
-          },
-          "<"
-        );
-      }
-
-      if (card) {
-        tl.to(card, { scale: 1, duration: 0.7, ease: "power2.inOut" }, "-=0.2");
-      }
-
-      // Step 4: extend connector line AFTER both cards settled
-      if (line) {
-        tl.to(
-          line,
-          {
-            scaleY: 2.5,
-            duration: 1,
-            ease: "power2.inOut",
-          },
-          "+=0.05"
-        );
-      }
-    });
-
-    // refresh ScrollTrigger when layout changes (images load, etc.)
-    ScrollTrigger.refresh();
+    return () => {
+      clearTimeout(initTimer);
+      ScrollTrigger.getAll().forEach((st) => {
+        if (st.vars.id && st.vars.id.toString().startsWith("timeline-event-")) {
+          st.kill();
+        }
+      });
+      animationInitialized.current = false;
+    };
   }, []);
 
   return (
@@ -189,14 +223,16 @@ export default function Timeline() {
                     </h3>
                   </header>
 
-                  <p className="text-xl md:text-3xl font-semibold text-white mb-4 leading-tight">
+                  <p className="text-xl md:text-3xl font-semibold text-yellow-200 mb-4 leading-tight">
                     {ev.title}
                   </p>
 
                   <div className="space-y-3 mt-6">
                     <div className="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors justify-center md:justify-start">
-                      <MapPinCheck className="w-5 h-5 text-emerald-400" />
-                      <p className="text-base">{ev.location}</p>
+                      <MapPinCheck className="text-lg text-emerald-400" />
+                      <p className="leading-relaxed flex-1 text-base text-blue-200">
+                        {ev.location}
+                      </p>
                     </div>
 
                     <div className="flex items-start gap-2.5 text-white/70 justify-center md:justify-start">
@@ -210,7 +246,7 @@ export default function Timeline() {
               </div>
             </div>
 
-            {/* Image card with connector anchored at top-full (so the connector's top aligns to card bottom) */}
+            {/* Image card with connector */}
             <div className="card w-full md:w-7/12 relative">
               <div className="bg-[#0f1720] border border-white/6 rounded-2xl p-5 shadow-2xl">
                 <ImageSlider
@@ -223,7 +259,7 @@ export default function Timeline() {
                 />
               </div>
 
-              {/* Connector line: TOP = 100% (immediately below the card); transform origin = top center */}
+              {/* Connector line */}
               {idx < (events as Event[]).length - 1 && (
                 <div
                   className="
