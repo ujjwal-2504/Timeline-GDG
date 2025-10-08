@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FaRegClock, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function UpcomingEventsPage() {
-  // const eventDate = new Date("2025-10-11T10:00:00");
+  //const eventDate = new Date("2025-10-11T10:00:00");
   const eventDate = new Date(Date.now() + 10 * 1000);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -57,7 +57,7 @@ export default function UpcomingEventsPage() {
       end: "09:38",
     },
     {
-      title: "Keynote — Dr. A. S. Kiran Kumar (Former ISRO Chairman)",
+      title: "Keynote — Dr. A. S. Kiran Kumar (Former ISRO Chairman) : Innovation In Indian Space Programme",
       start: "09:40",
       end: "10:05",
     },
@@ -68,7 +68,7 @@ export default function UpcomingEventsPage() {
     },
     {
       title:
-        "Talk — Ali Mustufa (Senior Developer Advocate at Pieces): Artificial Memory: Can an LLM Become You?",
+        "Talk — Ali Mustufa (Senior Developer Advocate at Pieces) : Artificial Memory: Can an LLM Become You?",
       start: "10:24",
       end: "10:54",
     },
@@ -102,7 +102,7 @@ export default function UpcomingEventsPage() {
       end: "14:19",
     },
     {
-      title: "Interactive Game / Quiz (with Goodies)",
+      title: "Samyak Jain (SDE , Opstree Solutions) : Interactive Game / Quiz (with Goodies)",
       start: "14:21",
       end: "14:31",
     },
@@ -115,19 +115,19 @@ export default function UpcomingEventsPage() {
     { title: "Happy Hour & Booth Interactions", start: "15:03", end: "15:33" },
     {
       title:
-        "Talk — Imran Roshan (Deloitte, GDE-GCP): WTH - Using AI for Security on GCP",
+        "Talk — Imran Roshan (Deloitte, GDE-GCP) : WTH - Using AI for Security on GCP",
       start: "15:33",
       end: "16:03",
     },
     {
       title:
-        "Talk — Ashish Kumar Verma (AI Engineer, GDE): Neurons to Networks: Orchestrating Memory",
+        "Talk — Ashish Kumar Verma (AI Engineer, GDE) : Neurons to Networks: Orchestrating Memory",
       start: "16:05",
       end: "16:35",
     },
     {
       title:
-        "Talk — Abhishek Sharma (Lead Cloud Engineer @ Searce, GDE-GCP): Accelerating Enterprise Development",
+        "Talk — Abhishek Sharma (Lead Cloud Engineer @ Searce, GDE-GCP) : Accelerating Enterprise Development",
       start: "16:37",
       end: "17:07",
     },
@@ -241,20 +241,43 @@ export default function UpcomingEventsPage() {
         </motion.h1>
 
         <motion.div
-          className="flex flex-col md:flex-row justify-center items-center gap-6 text-gray-200 mb-12 text-lg md:text-2xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          <div className="flex items-center gap-3">
-            <FaRegClock className="text-indigo-400" size={24} />
-            <span>11th October 2025, 9:00 AM – 5:30 PM</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <FaMapMarkerAlt className="text-indigo-400" size={24} />
-            <span>GP Birla Auditorium, BIT Mesra</span>
-          </div>
-        </motion.div>
+  className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-200 mb-12 text-lg md:text-2xl"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.5, duration: 1 }}
+>
+  {/* Event Time */}
+  <div className="flex items-center gap-3">
+    <FaRegClock className="text-indigo-400" size={24} />
+    <span>11th October 2025, 9:00 AM – 5:30 PM</span>
+  </div>
+
+  {/* Location with Google Maps link */}
+  <div className="flex items-center gap-3">
+    <FaMapMarkerAlt className="text-indigo-400" size={24} />
+    <a
+      href="https://maps.app.goo.gl/DLJsc1JiLXWNsZcL6"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-indigo-400 transition-colors underline underline-offset-4"
+    >
+      GP Birla Auditorium, BIT Mesra
+    </a>
+  </div>
+
+  {/* Add to Calendar */}
+  <motion.a
+    href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=GDG%20Ranchi%20DevFest%202025&details=Join%20us%20at%20GP%20Birla%20Auditorium%2C%20BIT%20Mesra%20for%20DevFest%202025!&location=GP%20Birla%20Auditorium%2C%20BIT%20Mesra&dates=20251011T090000/20251011T173000"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="px-6 py-2 border border-indigo-500 rounded-full text-sm md:text-base text-indigo-400 hover:bg-indigo-600 hover:text-white transition shadow-md"
+  >
+    📅 Add to Calendar
+  </motion.a>
+</motion.div>
+
 
         {/* Countdown before event */}
         {!isStarted && (
