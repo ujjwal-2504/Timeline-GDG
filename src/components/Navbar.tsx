@@ -27,7 +27,11 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2 font-bold text-xl text-gray-900"
         >
-          <img src="images/gdgLogo.png" alt="GDG Ranchi" className="w-8 h-8" />
+          <img
+            src="images/gdgLogo.png"
+            alt="GDG Ranchi"
+            className="w-12 h-7 "
+          />
           GDG Ranchi
         </motion.div>
 
