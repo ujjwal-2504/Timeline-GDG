@@ -495,5 +495,35 @@
       "images/Devspark_UshaMartin/Devspark_UshaMartin_2.jpeg",
       "images/Devspark_UshaMartin/Devspark_UshaMartin_3.jpeg"
     ]
+  },
+  {
+    "title": "DevFest'25 -- Birla Institute of Technology - Mesra",
+    "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, enim totam officia laborum doloribus quam cum molestiae deleniti maxime, iusto, quasi consectetur! Rem illo sequi eligendi enim explicabo quod ut.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, enim totam officia laborum doloribus quam cum molestiae deleniti maxime, iusto, quasi consectetur! Rem illo sequi eligendi enim explicabo quod ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, enim totam officia laborum doloribus quam cum molestiae deleniti maxime, iusto, quasi consectetur! Rem illo sequi eligendi enim explicabo quod ut.",
+    "date": "October 11, 2025",
+    "time": "Lorem ipsum dolor sit",
+    "location": "Birla Institute of Technology - Mesra, 835215, Ranchi",
+    "institute": "Birla Institute of Technology, Mesra",
+    "slug": "2025-10-11-bit-mesra-devfest-2025",
+    "images": [
+      "images/Devfest2025/Devfest2025_1.jpg",
+      "images/Devfest2025/Devfest2025_2.jpg",
+      "images/Devfest2025/Devfest2025_3.jpg"
+    ]
+  },
+  {
+    "title": "Ranchi Hacks -- Sarla Birla University",
+    "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, enim totam officia laborum doloribus quam cum molestiae deleniti maxime, iusto, quasi consectetur! Rem illo sequi eligendi enim explicabo quod ut.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, enim totam officia laborum doloribus quam cum molestiae deleniti maxime, iusto, quasi consectetur! Rem illo sequi eligendi enim explicabo quod ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, enim totam officia laborum doloribus quam cum molestiae deleniti maxime, iusto, quasi consectetur! Rem illo sequi eligendi enim explicabo quod ut.",
+    "date": "January 17 - 18, 2026",
+    "time": "Lorem ipsum dolor sit",
+    "location": "Sarla Birla University, Ranchi",
+    "institute": "Sarla Birla University",
+    "slug": "2026-1-17-18-sbu-ranchi-hacks-2026",
+    "images": [
+      "images/RanchiHacks/RanchiHacks_1.jpg",
+      "images/RanchiHacks/RanchiHacks_2.jpg",
+      "images/RanchiHacks/RanchiHacks_3.jpg"
+    ]
   }
 ]
